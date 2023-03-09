@@ -4,6 +4,6 @@ import com.xworkz.milkshop.dto.MilkShopDTO;
 
 public interface MilkShopService {
 	
-	boolean validateAndsave (MilkShopDTO dto);
+	public boolean validateAndsave (MilkShopDTO dto);
 
 }

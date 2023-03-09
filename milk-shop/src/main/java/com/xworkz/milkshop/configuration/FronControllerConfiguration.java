@@ -4,10 +4,11 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class FronControllerConfiguration extends AbstractAnnotationConfigDispatcherServletInitializer implements WebMvcConfigurer {
+public class FronControllerConfiguration extends AbstractAnnotationConfigDispatcherServletInitializer 
+implements WebMvcConfigurer {
 
 	
-	private Class[] servletConfigClasses= {SpringConfiguration.class};
+	private Class[] servletConfigClasses= {SpringConfiguration.class,DBConfiguration.class};
 	private String[] servletmappings= {"/"};
 	@Override
 	protected Class<?>[] getRootConfigClasses() {

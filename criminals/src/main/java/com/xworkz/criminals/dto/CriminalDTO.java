@@ -1,7 +1,6 @@
 package com.xworkz.criminals.dto;
 
 import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -17,13 +16,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@SuppressWarnings("serial")
+@SuppressWarnings("serializable")
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
-@Entity
 @Table(name = "criminal_info")
 
 @NamedQueries({ @NamedQuery(name = "findAll", query = "select info from CriminalDTO info") })
@@ -42,10 +40,10 @@ public class CriminalDTO implements Serializable {
 	private String gender;
 	private String international;
 	private String married;
-	private Double jailTerm;
+	private String jailTerm;
 	private String wifeName;
 	private String rightHandName;
 	private String leftHandName;
 	private String prisonName;
-	private Double netWorth;
+	private String netWorth;
 }

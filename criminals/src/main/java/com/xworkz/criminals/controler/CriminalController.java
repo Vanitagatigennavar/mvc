@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.xworkz.criminals.dto.CriminalDTO;
 import com.xworkz.criminals.service.CriminalService;
 @Controller
-@RequestMapping("/start")
+@RequestMapping("/criminal")
 public class CriminalController {
 	
 	@Autowired
@@ -30,7 +30,7 @@ public class CriminalController {
 		if (validateAndSave) {
 			System.out.println("Data is valid and Save");
 			model.addAttribute("records", "Records are Saved");
-			return "index";
+			return "criminalsdetails";
 		} else {
 			System.out.println("Data is notvalid and notSave");
 			return "index";

@@ -15,14 +15,15 @@ import com.xworkz.criminals.dto.CriminalDTO;
 
 @Repository
 public class CriminalDAOImple implements CriminalDAO {
+	
 	@Autowired
 	private EntityManagerFactory factory;
-	EntityManager manager;
+	EntityManager createEntityManager;
 
 	@Override
 	public boolean save(CriminalDTO dto) {
 		System.out.println("calling save method ");
-		EntityManager createEntityManager = factory.createEntityManager();
+		createEntityManager = factory.createEntityManager();
 
 		try {
 			EntityTransaction transaction = createEntityManager.getTransaction();
@@ -42,15 +43,16 @@ public class CriminalDAOImple implements CriminalDAO {
 	@Override
 	public List<CriminalDTO> findAll() {
 		try {
-			manager = factory.createEntityManager();
-			Query query = manager.createNamedQuery("findAll");
+			createEntityManager = factory.createEntityManager();
+			Query query = createEntityManager.createNamedQuery("findAll");
 			List<CriminalDTO> resultList = query.getResultList();
 			return resultList;
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		} finally {
-			manager.close();
+		} 
+		finally {
+			createEntityManager.close();
 		}
 		return findAll();
 	

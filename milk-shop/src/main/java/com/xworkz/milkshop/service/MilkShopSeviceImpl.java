@@ -5,19 +5,21 @@ import org.springframework.stereotype.Service;
 
 import com.xworkz.milkshop.dao.MilkShopDAO;
 import com.xworkz.milkshop.dto.MilkShopDTO;
+
 @Service
 public class MilkShopSeviceImpl implements MilkShopService {
-	
-@Autowired	
- private MilkShopDAO dao;
+
+	@Autowired
+	private MilkShopDAO dao;
+
 	@Override
 	public boolean validateAndsave(MilkShopDTO dto) {
-		System.out.println("create "+this.getClass().getSimpleName());
-		System.out.println("MilkShopDAO"+dao);
+		System.out.println("create " + this.getClass().getSimpleName());
+		System.out.println("MilkShopDAO" + dao);
+		dao.save(dto);
+		System.out.println("Callling validateAndsave");
 		return true;
-	}
 
-	
-	
+	}
 
 }

@@ -19,7 +19,7 @@
 	</form>
 	<a href="display"> click</a>
 	
-	<a href="Manoj.jsp"> enter</a>
+	<a href="Vanita.jsp"> enter</a>
 
 </body>
 </html>

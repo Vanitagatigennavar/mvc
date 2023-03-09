@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +10,7 @@
 </head>
 <body>
 <h1>CRIMINAL DETAILS</h1>
-<form action="start" method="post">
+<form action="criminal" method="post">
 <br><br>
 NAME:<input type="text" name="name">
 <br><br>
@@ -62,11 +64,12 @@ MARRIED:<input type="radio" name="married" value="Married">Married
 <br><br>
 JAILTERM:<select name="jailTerm">
 <option>select</option>
-<option>1</option>
-<option>2</option>
-<option>3</option>
-<option>4</option>
 <option>5</option>
+<option>10</option>
+<option>10</option>
+<option>15</option>
+<option>20</option>
+<option>25</option>
 </select>
 <br><br>
 WIFENAME:<input type="text" name="wifeName"/>
@@ -83,7 +86,7 @@ NET WORTH:<input type="text" name="netWorth"/>
 
 </form>
 <br><br>
-<a href="criminal">SHOW ALL CREMINALS DETAILS</a>
+<a href="criminal">SHOW ALL CRIMINALS DETAILS</a>
 
 </body>
 </html>

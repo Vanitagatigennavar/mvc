@@ -21,9 +21,16 @@ public class MilkShopController {
 	@PostMapping
 	public String Onsave(MilkShopDTO dto) {
 		System.out.println("saved "+dto);
-		milkShopService.validateAndsave(dto);
-		
-		return "success";
+		boolean validateAndsave = milkShopService.validateAndsave(dto);
+		System.out.println(validateAndsave);
+		if(validateAndsave) {
+			System.out.println("data is valid and save");
+			return "success";
+		}
+		else {
+			System.out.println("data is not valid and not save");
+			return "index";
+		}
 		
 		
 	}

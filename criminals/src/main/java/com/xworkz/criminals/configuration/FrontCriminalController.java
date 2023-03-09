@@ -2,10 +2,10 @@ package com.xworkz.criminals.configuration;
 
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import com.xworkz.criminals.configuration.DBConfiguration;
+import com.xworkz.criminals.configuration.DBConnection;
 public class FrontCriminalController extends AbstractAnnotationConfigDispatcherServletInitializer implements WebMvcConfigurer {
     
-	private Class[] servletconfigClasses= {SpringConfiguration.class,DBConfiguration.class};
+	private Class[] servletconfigClasses= {SpringConfiguration.class,DBConnection.class};
 	private String [] servletmappings={"/"};
 	
 	@Override
